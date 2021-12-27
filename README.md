@@ -1,6 +1,6 @@
 # AMLS_21-22_SN18014580
 
-## Introduction to the assignment
+## Introduction to the ELEC0134 Assignment
 
 This is the GitHub repository created by **STUDENT NUMBER 18014580** for the 2021/22 ELEC0134 Applied Machine Learning Systems final coding assignment. This repository is made up of 3 files/scripts that are used for Task A and B respectively. 
 
