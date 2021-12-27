@@ -37,15 +37,15 @@ For the 3 scripts , many require the same packages and in this section, we highl
 * `pandas` is required by all 3 scripts. This is mainly used to load and save csv files containing the labels as a dataframe.
 * `numpy` is required by all 3 scripts. This is used to manage any arrays and matrices and the calculations performed on them e.g. concatenation. It is also used to convert our images into numpy arrays so they can be processed. It is also used to find means and standard deviations for the learning curves.
 * `sklearn` is required by all 3 scripts to manage the models and many of the preprocessing:
-- This is also known as the sci-kit learn package and is used to run machine learning algorithms which are built in to the package. 
-- It is needed by `Task A using Logistic Regression.ipynb` to call the `LogisticRegression()` model. 
-- It is also needed by `Task A using SVM.ipynb` and `Task B using SVM.ipynb` to call `SVC()` for implementation of a support vector machine.
-- It also needed in all 3 scripts to handle other ML operation such as confusion matrices, classification reports, accuracy scores, grid searches and so on.
+    - This is also known as the sci-kit learn package and is used to run machine learning algorithms which are built in to the package. 
+    - It is needed by `Task A using Logistic Regression.ipynb` to call the `LogisticRegression()` model. 
+    - It is also needed by `Task A using SVM.ipynb` and `Task B using SVM.ipynb` to call `SVC()` for implementation of a support vector machine.
+    - It also needed in all 3 scripts to handle other ML operation such as confusion matrices, classification reports, accuracy scores, grid searches and so on.
 - The preprocessing and decomposition libraries of the package also handle the `StandardScaler()` and `PCA()` functions respectively.
 * `skimage` is required by all 3 scripts and is used for image preprocessing. This is also knwon as the sci-kit image package.
-- It is used to read the images from the datasets using `imread()` imported `skimage.io`.
-- It is used for data preparation such as `rgb2gray()` to convert the images to grayscale.
-- It is used in implementing the histogram of oriented gradients using `hog()`.
+    - It is used to read the images from the datasets using `imread()` imported `skimage.io`.
+    - It is used for data preparation such as `rgb2gray()` to convert the images to grayscale.
+    - It is used in implementing the histogram of oriented gradients using `hog()`.
 * `matplotlib` is required by all 3 scripts. It is used to plot the figures seen such as those displaying the HOG images, the explained variance for PCA, the confusion matrices and the ROC curves.
 * `seaborn` is required by all 3 scripts. It is also a data visualisation package and is used to called `heatmap()` for the confusion matrix plots.
 * `os` is required for `listdir()` but does not have to be installed in the virtual environment as it is part of Python's standard utility modules.
@@ -78,9 +78,18 @@ The default expectation is that Jupyter Notebook is used and the code has been w
 6. In the first cell under the subheading **Test set images loading**, change the word `directoryNEW` in lines 32 and 33 to `drive_directoryNEW` so that the Google Drive path is used instead of the regular one.
 7. Reverse all these changes if you need to shift back to using Jupyter Notebook. To do this, go through steps 1 - 6 and comment out any lines that were commented and uncomment any lines that were commented. Furthermore, change back the directory names from Steps 4 and 6 to `directory` and `directoryNEW` respectively.
 . 
-### Generating ROC Curves for Task A using SVM
+### Generating ROC Curves for Task A using SVM (only available as an example for Model 1)
 
-To generate ROC curves for `Task A using SVM.ipynb`, first run the script as described above. After that is finished, go back to the cell for Model 1 and set probaility to True such that line X reads ` `. Rerun this cell only using `Ctrl + Enter` and then run the two cells for the ROC curves only. Then go back and reset the probability of Model 1 to False.
+To generate ROC curves for `Task A using SVM.ipynb`, first run the script as described above. Then follow these steps:
+
+1. After running the entire script, go back to the cell for Model 1 (the first cell after the subheadings **Training the models**) and set probaility to True such that line 2 of that cell reads `model1_svmlinear = SVC(kernel = linear, probability = True)`.
+2. Rerun this cell only using `Ctrl + Enter`.
+3. Then uncomment and run only the two cells for the ROC curves (these are the two cells under the subheading **ROC curves and AUC (Area under curve)**. 
+4. After the ROC curves are generated, go back and reset the probability of Model 1 to False by removing the statement `probability = True` such that line 2 of that cell reads `model1_svmlinear = SVC(kernel = linear)`.
+5. Then rerun the cell for training Model 1 to ensure it is trained with `probability = False` again.
+6. Then comment out the two cells used for the ROC curves. This is to ensure, that if the entire script is run again, the cells won't cause an error now that the probability was set back to False in Step 5.
+
+*Note: we set the probability back to False as when it is set to True, the runtime is signficantly longer and what is seen in the ROC curve can also be seen in a confusion matrix so the ROC curve is not necessary.*
 
 ### Leaving the images in RGB instead of converting to Grayscale (NOT RECOMMENDED)
 
