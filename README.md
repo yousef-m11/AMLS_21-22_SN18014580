@@ -13,11 +13,14 @@ In the assignment, we are required to build classifiers which perform image clas
 
 ## Repository structure
 
-This repositiory is made of 3 main files/scripts used for Tasks A and B respectively. The detailed breakdown of these main files is given below:
+This repositiory is made of 3 main files/scripts used for Tasks A and B respectively. The detailed breakdown of these main files and an average runtime for each is given below:
 
 * `Task A using Logistic Regression.ipynb` is used to run the binary classifier for Task A using the Logistic Regression model. This trains a Logistic Regression model using the dataset uploaded and then tests it using both the dataset uploaded and the new testing set uploaded a week before the deadline. The testing outputs classification reports and confusion matrices. Hyperparameter tuning is also conducted to improve accuracy scores.
+    - The runtime for this script is: 22 mins 8 secs.
 * `Task A using SVM.ipynb`is used to run the binary classifier for Task A using the Support Vector Machine (SVM) model. This trains 3 SVMs (3 different kernel types) using the dataset uploaded and then tests it using both the dataset uploaded and the new testing set uploaded a week before the deadline. The testing outputs classification reports and confusion matrices. Hyperparameter tuning is also conducted to improve accuracy scores and find a final SVM model to use with optimised parameters.
+    - The runtime for this script is: 26 mins 13 secs.
 * `Task B using SVM.ipynb` is used to run the multiclass classifier for Task B using the Support Vector Machine (SVM) model. This trains 6 SVMs (3 different kernel types two times each (once using a one-vs-rest approach and once using a one-vs-one approach)). The models are trained using the dataset uploaded and then tested using both the dataset uploaded and the new testing set uploaded a week before the deadline. The testing outputs classification reports and confusion matrices. Hyperparameter tuning is also conducted to improve accuracy scores and find a final SVM model to use with optimised parameters.
+    - The runtime for this script is: 36 mins 46 secs.
 
 A breakdown of the other folders and files in the repository is also given below:
 
@@ -29,11 +32,13 @@ A breakdown of the other folders and files in the repository is also given below
 
 ## Packages required
 
-Many of the scripts require the same packages and in this section, we highlight each of the packages.
+For the 3 scripts , many require the same packages and in this section, we highlight each of the packages, which scripts they are needed in and what functions they are needed to perform.
 
 * `pandas` is required ...
 
 ## How to run the code 
+
+To run this code and i, use Jupyter Notebook. If using Google Colab, it
 
 ## Other special notes and instructions
 
